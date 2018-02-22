@@ -1,0 +1,22 @@
+{
+  "name": "everywhere",
+  "version": "1.0.0",
+  "description": "the node static web server",
+  "main": "/src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laclys/everywhere.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laclys/everywhere/issues"
+  },
+  "homepage": "https://github.com/laclys/everywhere#readme",
+  "dependencies": {
+    "chalk": "^2.3.1"
+  }
+}
