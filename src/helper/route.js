@@ -31,7 +31,12 @@ module.exports = async function (req, res, filePath) {
         const data = {
           title: path.basename(filePath),
           dir: dir ? `/${dir}`: '',  // req.url 也可以
-          files
+          files: files.map(item => {
+            return {
+              file: item,
+              icon: mine(item)
+            }
+          })
         }
         res.end(template(data))
     }
