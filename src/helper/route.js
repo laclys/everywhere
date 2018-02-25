@@ -5,6 +5,7 @@ const {promisify} = require('util')
 const stat = promisify(fs.stat)
 const readdir = promisify(fs.readdir)
 const config = require('../config/defaultConfig')
+const mine = require('./mime')
 
 const tplPath = path.join(__dirname, '../template/dir.tpl')
 const source = fs.readFileSync(tplPath)
@@ -14,8 +15,9 @@ module.exports = async function (req, res, filePath) {
   try {
     const stats = await stat(filePath)
     if (stats.isFile()) {
+      const contentType = mine(filePath)
       res.statusCode = 200
-      res.setHeader('Content-Type', 'text/plain')
+      res.setHeader('Content-Type', contentType)
       // fs.readFile(filePath, (err, data) => {
       //   res.end(data)
       // })
@@ -28,7 +30,7 @@ module.exports = async function (req, res, filePath) {
         const dir = path.relative(config.root, filePath)
         const data = {
           title: path.basename(filePath),
-          dir: dir ? `/${dir}`: '',
+          dir: dir ? `/${dir}`: '',  // req.url 也可以
           files
         }
         res.end(template(data))

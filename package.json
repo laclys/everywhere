@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/laclys/everywhere#readme",
   "dependencies": {
-    "chalk": "^2.3.1"
+    "chalk": "^2.3.1",
+    "handlebars": "^4.0.11"
   }
 }
