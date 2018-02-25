@@ -24,6 +24,6 @@ module.exports = async function (req, res, filePath) {
   } catch (err) {
     res.statusCode = 404
     res.setHeader('Content-Type', 'text/plain')
-    res.end(`${filePath} is not a dir or file`)
+    res.end(`${filePath} is not a dir or file\n ${err.toString()}`)
   }
 }
