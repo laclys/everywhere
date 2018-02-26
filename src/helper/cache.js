@@ -15,7 +15,7 @@ function refreshRes(stats, res) {
 
   // 设置Last-Modified
   if (lastModified) {
-    res.setHeader('Last-Modified', stats.mtime.toUTCString())
+    res.setHeader('Last-Modified', stats.mtime.toUTCString())  // stats.mtime获取文件最后修改的时间
   }
 
   if (etag) {
