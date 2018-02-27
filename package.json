@@ -1,8 +1,11 @@
 {
   "name": "everywhere",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "the node static web server",
   "main": "src/app.js",
+  "bin": {
+    "node-everywhere": "bin/node-everywhere"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
