@@ -1,5 +1,10 @@
 # everywhere
-the node static web server
+the node static file server
+
+### Install
+```bash
+
+```
 
 ### Usage：
 ```bash
