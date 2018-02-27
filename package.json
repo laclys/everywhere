@@ -1,5 +1,5 @@
 {
-  "name": "everywhere",
+  "name": "node-everywhere",
   "version": "0.1.0",
   "description": "the node static web server",
   "main": "src/app.js",
